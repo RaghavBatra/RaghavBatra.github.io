@@ -1,8 +1,4 @@
----
-layout: default
-title: Arnav Ghosh
----
-<div class="row"><!-- Profile -->
+﻿<div class="row"><!-- Profile -->
 	<div class="twelve columns about">
 		<div class="seven columns about-info">
 			<h2>Arnav Ghosh</h2>
@@ -24,7 +20,7 @@ title: Arnav Ghosh
 		</div>
 
 		<div class="five columns about-media">
-			<img src="images/potrait.png" />
+			<img src="images/portrait.jpg" />
 		</div>
 
 		</div>
@@ -50,47 +46,3 @@ title: Arnav Ghosh
 		<h4>Selected Projects</h4>
 	</div>
 </div><!-- /Project Section Title -->
-
-
-{% assign projects_per_row = 3 %}
-{% capture num_rows %} {{site.data.projects.size | modulo:projects_per_row}} {% endcapture %}
-
-{% for r in (0 .. num_rows) %}
-	<div class="row"><!-- Row of Projects -->
-		{% capture loop_2_end %} {{projects_per_row | minus: 1}} {% endcapture %}
-		{% assign loop_2_end = loop_2_end | plus: 0 %} <!-- Convert loop_2_end to int -->
-		{% for p in (0 .. loop_2_end) %}
-			{% capture idx %} {{r | times: projects_per_row}} {% endcapture %}
-			{% capture idx %} {{idx | plus: p}} {% endcapture %}
-			{% assign idx = idx | plus: 0 %} <!-- Convert idx to int -->
-			{% assign project = site.data.projects[idx] %}
-
-			{% if p == loop_2_end %}
-				<div class="four columns project-card" style="border-right-style:none">
-			{% else %}
-				<div class="four columns project-card">
-			{% endif %}
-					<div class="row"><!-- Project Img -->
-						<div class="eleven columns project-img">
-							<img src="images/{{ project.img_name }}" />
-						</div>
-					</div>
-
-					<div class="row"><!-- Project Title -->
-						<div class="eleven columns project-title">
-							<h5> {{ project.title }} </h5>
-						</div>
-					</div>
-
-					<div class="row"><!-- Project Links -->
-						<div class="eleven columns project-links">
-							<a href="docs/{{ project.filename }}" target="_blank"><img src="images/docs.png" /></a>
-							<a href="{{ project.source_url }}"><img src="images/github.png" /></a>
-						</div>
-					</div>
-
-				</div>
-		{% endfor %}
-
-	</div><!-- /Row of Projects -->
-{% endfor %}
