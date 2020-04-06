@@ -19,6 +19,12 @@ html {
     display: inline-block;
 }
 
+.contact img {
+  width: 4em;
+  height: 4em;
+  margin: 0.5em;
+}
+
 .about-media img {
   border-radius: 50%;
   height: 20em;
