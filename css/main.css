@@ -1,33 +1,26 @@
-.contact {
-    margin-top:1em;
-    text-align: left;
+html {
+  font-family: sans-serif;
 }
 
-.contact img {
-    margin-right:10px;
-}
-
-.resume {
-    margin-top:1.5em;
-    text-align: right;
-}
 
 .about {
-    width: 70%;
+    padding-left: 7.5%;
+    /* padding-right: 5%; */
+    width: 50%;
     display: inline-block;
 }
 
 .about-info {
-    text-align: left;
+    text-align: justify;
 }
 
 .about-media {
-    width: 29%;
+    width: 35%;
     display: inline-block;
 }
 
 .about-media img {
   border-radius: 50%;
-  height: 80%;
-  width: 80%;
+  height: 20em;
+  width: 20em;
 }
