@@ -25,6 +25,12 @@ html {
   margin: 0.5em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
 .about-media img {
   border-radius: 50%;
   height: 20em;
