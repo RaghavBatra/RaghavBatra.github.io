@@ -33,6 +33,7 @@ a {
 
 .about-media img {
   border-radius: 50%;
+  margin-top: 1em;
   height: 22em;
   width: 27em;
 }
